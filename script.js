@@ -33,8 +33,9 @@ function getAndUpdate() {
         <tr>
             <th scope="row">${index + 1}</th>
             <td>${element[0]}</td>
-            <td>${element[1]} </td>
-            <td><button class="btn btn-sm btn-primary" onclick = "deleted(${index})"> Delete </button> </td>
+            <td id="unstrike">${element[1]} </td>
+            <td><button class="btn btn-sm btn-primary" onclick = "deleted(${index})"> Undo </button> </td>
+            <td class="checkthrough"> <input type="checkbox" id="check" onclick = "done(${index})">  </td>
         </tr>`;
     });
     tableBody.innerHTML = str;
