@@ -14,6 +14,22 @@
     />
 
     <title>TODOs List</title>
+    <style>
+        table {
+          border-collapse: collapse;
+        }
+
+        .strikethrough {
+          background: repeating-linear-gradient(
+            180deg,
+            black 0%,
+            black 100%
+          );
+          background-size: 100% 2px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -96,7 +112,7 @@
 
       <div id="items" class="my-4">
         <h2>Your items</h2>
-        <table class="table">
+        <table class="table strike-able">
           <thead>
             <tr>
               <th scope="col">Serial No.</th>
@@ -128,7 +144,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

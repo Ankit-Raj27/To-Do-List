@@ -35,7 +35,7 @@ function getAndUpdate() {
             <td>${element[0]}</td>
             <td id="unstrike">${element[1]} </td>
             <td><button class="btn btn-sm btn-primary" onclick = "deleted(${index})"> Undo </button> </td>
-            <td class="checkthrough"> <input type="checkbox" id="check" onclick = "done(${index})">  </td>
+            <td class="checkthrough"> <input type="checkbox" id="check" onchange="closest('tr').classList.toggle('strikethrough')">  </td>
         </tr>`;
     });
     tableBody.innerHTML = str;
@@ -63,3 +63,7 @@ function getAndUpdate() {
             update();
         }
     }
+
+    function done(ctrl){  
+      ctrl.closest('tr').toggleClass('strikethrough');
+   }
