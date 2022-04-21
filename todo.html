@@ -18,15 +18,22 @@
         table {
           border-collapse: collapse;
         }
+        #s1{
+          
+          margin: 50px;
+          position: relative;
+          align-items: center;
+        }
 
         .strikethrough {
-          background: repeating-linear-gradient(
+          background: linear-gradient(
             180deg,
             black 0%,
             black 100%
           );
-          background-size: 100% 2px;
-          background-position: center;
+          padding-left: px;
+          background-size: 50% 2px;
+          background-position: 25% 50%;
           background-repeat: no-repeat;
         }
     </style>
@@ -124,7 +131,7 @@
           </thead>
           <tbody id="tableBody">
             <tr>
-              <th scope="row">1</th>  
+              <th scope="row" id="s1">1</th>  
               <td>Get some coffee</td>
               <td>You need a cup coffee as you're a coder.</td>
               <td><button class="btn btn-sm btn-primary">Undo</button></td>

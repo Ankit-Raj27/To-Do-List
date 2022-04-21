@@ -31,7 +31,7 @@ function getAndUpdate() {
     itemJsonArray.forEach((element, index) => {
       str += `
         <tr>
-            <th scope="row">${index + 1}</th>
+            <th scope="row" id="s1">${index + 1}</th>
             <td>${element[0]}</td>
             <td id="unstrike">${element[1]} </td>
             <td><button class="btn btn-sm btn-primary" onclick = "deleted(${index})"> Undo </button> </td>
@@ -64,6 +64,4 @@ function getAndUpdate() {
         }
     }
 
-    function done(ctrl){  
-      ctrl.closest('tr').toggleClass('strikethrough');
-   }
+   
